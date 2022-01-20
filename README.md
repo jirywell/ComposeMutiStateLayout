@@ -103,7 +103,7 @@ fun ComposeMultiStateStateLayout(
 如上所示，可以直接使用，如果需要修改状态，修改`pageStateData`即可
 
 #### 切换布局状态和自定义文案
-如果我们需要切换布局状态和自定义文案或者图片等细节，可简单直接修改`pageStateData`即可,不设置则使用默认文案,图片
+如果我们需要切换布局状态和自定义文案或者图片等细节，可简单直接修改`pageState`即可,不设置则使用默认文案,图片
 ```kotlin
 
     var pageState: PageState by remember {
