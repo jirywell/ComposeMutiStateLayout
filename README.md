@@ -171,3 +171,21 @@ error = {
 ```
 
 其实代码非常简单，和`Scaffold`脚手架原理很相识,我们可以快速的定义一个包含多状态控件的页面
+
+**邮箱**：664209769@qq.com
+
+## License
+
+    Copyright 2022 赵继瑞
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
