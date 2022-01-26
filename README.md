@@ -72,22 +72,26 @@ fun ComposeMultiStateStateLayout(
 }
 
 @Composable
-fun DefaultLoadingLayout(layoutData: LayoutData) {
-    Box(modifier = Modifier.fillMaxSize()) {
-        Column(
-            modifier = Modifier
-                .wrapContentSize()
-                .align(Alignment.Center),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            CircularProgressIndicator()
-            Text(
-                text = layoutData.pageStateData.tipTex,
-                style = MaterialTheme.typography.body1,
-                modifier = Modifier.padding(16.dp)
-            )
-        }
-    }
+fun DefaultMultiStateLayout(
+    modifier: Modifier = Modifier,
+    pageState: PageState,
+    onReLoad: () -> Unit = { },
+    loading: @Composable (LayoutData) -> Unit = { DefaultLoadingLayout(it) },
+    empty: @Composable (LayoutData) -> Unit = { DefaultEmptyLayout(it) },
+    error: @Composable (LayoutData) -> Unit = { DefaultErrorLayout(it) },
+    custom: @Composable (LayoutData) -> Unit = {},
+    content: @Composable () -> Unit = { }
+) {
+    ComposeMultiStateStateLayout(
+        modifier = modifier,
+        pageState = pageState,
+        onReLoad = onReLoad,
+        loading = { loading(it) },
+        empty = { empty(it) },
+        error = { error(it) },
+        custom = { custom(it) },
+        content = content
+    )
 }
 
 ```
