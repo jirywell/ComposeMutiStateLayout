@@ -70,6 +70,26 @@ fun ComposeMultiStateStateLayout(
         }
     }
 }
+
+@Composable
+fun DefaultLoadingLayout(layoutData: LayoutData) {
+    Box(modifier = Modifier.fillMaxSize()) {
+        Column(
+            modifier = Modifier
+                .wrapContentSize()
+                .align(Alignment.Center),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            CircularProgressIndicator()
+            Text(
+                text = layoutData.pageStateData.tipTex,
+                style = MaterialTheme.typography.body1,
+                modifier = Modifier.padding(16.dp)
+            )
+        }
+    }
+}
+
 ```
 如上所示,初始化时我们主要需要做以下事
 1. 自定义默认加载中，加载失败，加载为空等样式
